@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!--Header Search-->
+    <header class="position-sticky top-0">
+        <div class="container divSearch">
+            <div class="row">
+                <div class="col-sm-12 col-md-1 col-lg-1"></div>
+                <div class="col-sm-12 col-md-10 col-lg-10" style="padding: 0px;">
+                    <h4 class="headSearch">My News
+                        <button id="searchButton" type="button" data-bs-toggle="modal" data-bs-target="#searchNewsForm"><!--- When click button will be turn on Modal (Search form )-->
+                            <span ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/> </svg>
+                             </span>
+                        </button>
+                    </h4>
+                </div>
+                <div class='col-sm-12 col-md-1 col-lg-1'></div>
+            </div>
+        </div>
+    </header>
+    <!-------------------------------------->
+    <!-- Start Modal -->
+    <div class="modal fade" id="searchNewsForm">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p id="error"></p>
+                </div>
+                <div class="modal-body md-body">
+                    <div class="container">
+                        <!-- Keyword-->
+                        <div class="row" id=keywordRow>
+                            <div class="col-sm-12 col-md-2">
+                                <label id="labelKeyword" for="inputSearch" class="col-form-label">Keywords </label>
+                            </div>
+                            <div class="col-sm-12 col-md-10">
+                                <input id="inputSearch" type="text" placeholder="input type here." autofocus>
+                            </div>
+                        </div>
+                        <!---Date-->
+                        <div class="row " id="dateRow">
+                            <div class="col-sm-2 col-md-2"> <label for="dateFrom">DateFrom</label></div>
+                            <div class="col-sm-4 col-md-4"> <input type="date" name=" " id="dateFrom"></div>
+                            <div class="col-sm-2 col-md-2"> <label for="dateTo">DateTo</label></div>
+                            <div class="col-sm-4 col-md-4"> <input type="date" name=" " id="dateTo"></div>
+                        </div>
+                        <!-- Filter-->
+                        <div class="row filterRow">
+                            <div class="col-sm-2">
+                                <label for=" ">Filter :</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <label for="key ">By Key</label>
+                                <input type="checkbox" id="keyCheck" checked disabled>
+                                <label for="key ">By Date</label>
+                                <input type="checkbox" id="dateCheck">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="submitKeywords" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--ENd Modal--->
+    <div class="container" id="listNews">
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row" style="margin-bottom: 5px;">
+                <div class="col-sm-12 col-md-1 col-md-1"></div>
+                <div class="col-sm-12 col-md-10 col-lg-10 " id="contentFooter">
+                    <p> <span>&#169;</span> Copyright 2021 by My News .All Rights Reserved.
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-1 col-md-1"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="jquery-3.6-0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="indexJquery.js"></script>
+
+</body>
+
+</html>

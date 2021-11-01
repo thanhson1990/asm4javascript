@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width:767px) {
+    /* Phone */
+    .picture {
+        width: 100%;
+        height: 300px;
+    }
+    #dateFrom,
+    #dateTo {
+        width: 100%;
+    }
+    .line {
+        display: none;
+    }
+    #inputSearch {
+        border-radius: 5px;
+        width: inherit;
+    }
+    #submitKeywords {
+        padding: 2px;
+        width: 100%;
+    }
+    .filterRow,
+    #dateRow,
+    #keywordRow {
+        margin: 8px 0px 8px 0px;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    /* Ipad  */
+    .picture {
+        height: 210px;
+    }
+    .modal-content {
+        width: 600px;
+    }
+    #keywordRow>div>label {
+        padding-top: 0px;
+    }
+    #keywordRow>div>input {
+        width: 100%;
+    }
+    #dateRow>div>input {
+        width: 90%;
+    }
+    #keywordRow div:first-child,
+    #dateRow div:first-child,
+    .filterRow div:first-child {
+        margin-right: 12px;
+    }
+    .filterRow,
+    #dateRow,
+    #keywordRow {
+        margin: 8px 0px 8px 0px;
+        flex-wrap: nowrap;
+    }
+    #submitKeywords {
+        padding: 2px;
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    /* Desktop  */
+    .picture {
+        height: 300px;
+    }
+    #submitKeywords {
+        padding: 2px;
+        width: 30%;
+    }
+}
+
+.listRow>div {
+    margin: 10px 0px 10px 0px;
+    /* top right bottom left*/
+}
+
+
+/* General */
+
+.padding-none {
+    padding: 0px;
+}
+
+.picture {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.title {
+    justify-content: center;
+}
+
+.headSearch {
+    height: 100%;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: orange;
+    font-weight: bold;
+}
+
+.line>.col-md-10,
+.line>.col-lg-10 {
+    padding: 0px;
+}
+
+.filterRow>div>label,
+#dateRow>div>label,
+#keywordRow>div>label {
+    font-weight: bold;
+}
+
+#searchButton {
+    border: none;
+    background-color: orange;
+}
+
+.filter>label {
+    font-weight: bold;
+}
+
+#contentFooter {
+    padding: 0px;
+    margin: 5px 0px 0px 0px;
+    height: 37px;
+}
+
+#contentFooter>p {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+    padding: 3px 0px 3px 0px;
+    margin: 0px 0px 5px 0px;
+    height: inherit;
+}
+
+#contentFooter>span>hr {
+    height: 1px;
+    background-color: white;
+    color: brown;
+    margin: 0px 0px 0px 0px;
+}
+
+.errStyle {
+    height: max-content;
+    width: max-content;
+    color: red;
+}
