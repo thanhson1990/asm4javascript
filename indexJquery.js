@@ -68,6 +68,7 @@ $(document).ready(function() {
             setError("Type keyword to search .");
             return;
         }
+        else{
         if ($('#dateCheck').prop('checked') == true) { // if Date Filter  = true then do statements bellow
             var inputDateFrom = ($('#dateFrom').val()); // Date From
             var inputDateTo = ($('#dateTo').val()); // Date To
@@ -84,6 +85,7 @@ $(document).ready(function() {
             }
         } else {
             urlSearch = "https://gnews.io/api/v4/search?q=" + keyword + "&token=f141e45c014a1fa43dedb9ee213442c0&lang=en";
+        }
         }
         // Contruction Ajax request to get data from API  
         $.ajax({
